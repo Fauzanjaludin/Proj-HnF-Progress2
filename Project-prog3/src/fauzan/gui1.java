@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 import java.awt.Color;
+import javax.swing.border.LineBorder;
 
 public class gui1 {
 
@@ -76,9 +77,10 @@ public class gui1 {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Outdoor Sports Club");
+		lblNewLabel.setForeground(Color.ORANGE);
 		lblNewLabel.setBackground(Color.WHITE);
-		lblNewLabel.setBounds(10, 11, 308, 70);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel.setBounds(10, 11, 399, 70);
+		lblNewLabel.setFont(new Font("Vivaldi", Font.BOLD, 40));
 		frame.getContentPane().add(lblNewLabel);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -86,8 +88,10 @@ public class gui1 {
 		frame.getContentPane().add(tabbedPane);
 		
 		JPanel panel = new JPanel();
-		panel.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setBorder(new LineBorder(Color.ORANGE, 5));
 		tabbedPane.addTab("Register", null, panel, null);
+		tabbedPane.setBackgroundAt(0, Color.LIGHT_GRAY);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel(" Info On Sport");
@@ -95,7 +99,7 @@ public class gui1 {
 		panel.add(lblNewLabel_1);
 		
 		JTextPane infotxt = new JTextPane();
-		infotxt.setBounds(10, 139, 949, 277);
+		infotxt.setBounds(10, 139, 560, 277);
 		panel.add(infotxt);
 		
 		txtname1 = new JTextField();
@@ -287,13 +291,8 @@ public class gui1 {
 		butreg.setBounds(580, 98, 89, 23);
 		panel.add(butreg);
 		
-		JButton btnNewButton_2 = new JButton("exit");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btnNewButton_2.setBounds(870, 98, 89, 23);
-		panel.add(btnNewButton_2);
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setBounds(738, 402, 46, 14);
+		panel.add(lblNewLabel_4);
 	}
 }
