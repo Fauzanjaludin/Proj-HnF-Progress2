@@ -16,6 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -30,6 +32,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
+import javax.swing.SwingConstants;
 
 public class gui1 {
 
@@ -112,6 +115,11 @@ public class gui1 {
 		txtname2.setBounds(290, 42, 280, 20);
 		panel.add(txtname2);
 		
+		JLabel l4 = new JLabel("");
+		l4.setHorizontalAlignment(SwingConstants.CENTER);
+		l4.setBounds(590, 139, 369, 277);
+		panel.add(l4);
+		
 		cbgen = new JComboBox();
 		cbgen.setModel(new DefaultComboBoxModel(new String[] {"Choose a Gender", "Male", "Female"}));
 		cbgen.setBounds(290, 73, 280, 20);
@@ -122,7 +130,16 @@ public class gui1 {
 			public void actionPerformed(ActionEvent e) {
 				String a=String.valueOf(cbsport.getSelectedItem());
 					infotxt.setText(ods.print1(a));
-					
+					if(a=="Hiking") {
+						l4.setIcon(new ImageIcon(menu1.class.getResource("/icon/hiking.jpg")));
+					}else if(a=="Surfing") {
+						l4.setIcon(new ImageIcon(menu1.class.getResource("/icon/surfingsport.jpg")));
+					}else if(a=="Cycling") {
+						l4.setIcon(new ImageIcon(menu1.class.getResource("/icon/Cycling.png")));
+					}else {
+						l4.setIcon(new ImageIcon(menu1.class.getResource("")));
+					}
+				
 				
 			}
 		});
@@ -291,8 +308,6 @@ public class gui1 {
 		butreg.setBounds(580, 98, 89, 23);
 		panel.add(butreg);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(738, 402, 46, 14);
-		panel.add(lblNewLabel_4);
+	
 	}
 }

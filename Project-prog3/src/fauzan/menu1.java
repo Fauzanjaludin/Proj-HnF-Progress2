@@ -136,7 +136,7 @@ public class menu1 {
 		l4.setIcon(new ImageIcon(menu1.class.getResource("/icon/o1.png")));
 		frame.getContentPane().add(l4);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
+		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(null);
 		lblNewLabel_1.setBounds(0, 0, 914, 430);
 		frame.getContentPane().add(lblNewLabel_1);
