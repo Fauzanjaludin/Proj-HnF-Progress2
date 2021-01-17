@@ -129,9 +129,11 @@ int i = 0;
         mobobese = new javax.swing.JLabel();
         mobobesetext = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         bg3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setLayout(null);
 
@@ -217,7 +219,7 @@ int i = 0;
 
         bg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/asdasdasdasdas-01.png"))); // NOI18N
         jPanel2.add(bg2);
-        bg2.setBounds(0, 0, 1300, 570);
+        bg2.setBounds(0, 0, 1310, 570);
 
         TabPane.addTab("Aerobic Class Menu", jPanel2);
 
@@ -276,6 +278,7 @@ int i = 0;
 
         priceTF.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         priceTF.setForeground(new java.awt.Color(153, 0, 204));
+        priceTF.setText("RM");
         jPanel1.add(priceTF);
         priceTF.setBounds(90, 470, 150, 30);
 
@@ -524,6 +527,18 @@ int i = 0;
         jLabel9.setText("Designed & Developed by Muhamad Waiz  © Copyright 2021");
         jPanel3.add(jLabel9);
         jLabel9.setBounds(730, 530, 340, 20);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Example 170cm, type = 1.7");
+        jPanel3.add(jLabel10);
+        jLabel10.setBounds(90, 270, 160, 15);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Example 80kg, type = 80");
+        jPanel3.add(jLabel11);
+        jLabel11.setBounds(100, 400, 150, 14);
 
         bg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bmibg-01.png"))); // NOI18N
         jPanel3.add(bg3);
@@ -831,6 +846,8 @@ int i = 0;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
