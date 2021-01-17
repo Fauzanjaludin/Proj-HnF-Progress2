@@ -562,7 +562,7 @@ int i = 0;
 
     private void enterBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterBTNActionPerformed
         // TODO add your handling code here:
-             DefaultTableModel model;
+        DefaultTableModel model;
         model = (DefaultTableModel) table.getModel();
 
         model.addRow(new Object[]{
