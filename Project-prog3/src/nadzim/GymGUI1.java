@@ -328,7 +328,7 @@ public class GymGUI1 extends javax.swing.JFrame {
 
         if(table.getSelectedRow()==-1){
             if(table.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null, "Register Update confirmed", "Membership Gym System",
+                JOptionPane.showMessageDialog(null, "Register Update confirmed", "Gym System",
                     JOptionPane.OK_OPTION);
             }
         }
