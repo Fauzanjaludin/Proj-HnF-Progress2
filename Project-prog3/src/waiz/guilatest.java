@@ -34,7 +34,6 @@ int i = 0;
     public guilatest() {
         initComponents();
         dateTF.setText(" "+ dateFormat.format(date));
-        
         label50.setVisible(false);
         label51.setVisible(false);
         text1.setVisible(false);
@@ -137,8 +136,6 @@ int i = 0;
 
         jPanel2.setLayout(null);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/HOMEbtn-01.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -814,6 +811,7 @@ int i = 0;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new guilatest().setVisible(true);
             }
