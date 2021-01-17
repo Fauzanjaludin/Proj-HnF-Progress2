@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import nadzim.GymGUI;
+import nadzim.GymGUI1;
 import sasikala.*;
 import waiz.guilatest;
 
@@ -48,7 +48,7 @@ public class menu1 {
 	 */
 	private void initialize() {
 		gui1 g1=new gui1();
-		GymGUI g2=new GymGUI();
+		GymGUI1 g2=new GymGUI1();
 		guilatest g3=new guilatest();
 		YogaGui g4=new YogaGui();
 		
