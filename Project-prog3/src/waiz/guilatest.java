@@ -578,7 +578,7 @@ int i = 0;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
-        File file = new File ("DataAerobicRecorded.txt");
+        File file = new File ("RecordedAerobic.txt");
         if(!file.exists()){
             file.createNewFile();
         }
