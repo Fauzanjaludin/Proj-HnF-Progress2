@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
@@ -50,14 +51,50 @@ int i = 0;
         mobobese.setVisible(false);
         mobobesetext.setVisible(false);
         
+        addRowToJTable();
         
-        
-        /////////////////
-        
-        
+        /////////////////   
         
     }
-
+    
+    public class bmi1{
+    	public String categories;
+    	public String bmirange;
+    	
+    	public bmi1(String Categories, String Bmirange) 
+    	{
+    		this.categories = Categories;
+    		this.bmirange = Bmirange;
+    	}
+    }
+    
+    public  ArrayList ListBmi()
+    {
+    	ArrayList<bmi1> list = new ArrayList<bmi1>();
+    	bmi1 bod1 = new bmi1("Normal Weight","19 - 24.9");
+    	bmi1 bod2 = new bmi1("Over Weight","25 - 29.9");
+    	bmi1 bod3 = new bmi1("Obesity Level 1","30 - 34.9");
+    	bmi1 bod4 = new bmi1("Obesity Level 2","35 - 39.9");
+    	bmi1 bod5 = new bmi1("Obesity Level 3","Above 40");
+    	list.add(bod1);
+    	list.add(bod2);
+    	list.add(bod3);
+    	list.add(bod4);
+    	list.add(bod5);
+    	return list;
+    }
+    public void addRowToJTable()
+    {
+    	DefaultTableModel  model = (DefaultTableModel) jTable1.getModel();
+    	ArrayList<bmi1> list = ListBmi();
+    	Object rowData[] = new Object[2];
+    	for(int i = 0; i < list.size(); i++) 
+    	{
+    		rowData[0] = list.get(i).categories;
+    		rowData[1] = list.get(i).bmirange;
+    		model.addRow(rowData);
+    	}
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -416,26 +453,13 @@ int i = 0;
         jButton11.setBounds(610, 520, 100, 40);
 
         jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Normal Weight", "19 - 24.9"},
-                {"Over Weight", "25- 29.9"},
-                {"Obesity Level 1", "30 - 34.9"},
-                {"Obesity Level 2", "35 - 39.9"},
-                {"Obesity Level 3", "Above 40"}
-            },
-            new String [] {
-                "Categories", "BMI Range"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        jTable1.setModel(new DefaultTableModel(
+        	new Object[][] {
+        	},
+        	new String[] {
+        		"Categories", "BMI Range"
+        	}
+        ));
         jScrollPane2.setViewportView(jTable1);
 
         jPanel3.add(jScrollPane2);
