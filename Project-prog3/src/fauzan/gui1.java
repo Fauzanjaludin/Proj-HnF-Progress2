@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -262,9 +263,28 @@ public class gui1 {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-				
+					File fl= new File("new1.csv");
+					FileWriter csvW = new FileWriter(fl);
+					BufferedWriter bw=new BufferedWriter(csvW);
+					PrintWriter pw=new PrintWriter(bw);
+					ArrayList<String> nfo1=new ArrayList<String>();
+					nfo1=inf.print();
+					bw.write("ID,Sport,First Name,Last Name,Gender,Race");
+					bw.newLine();
+					String g="";
+					 for(int i=0;i<nfo1.size();i++)
+				        {
+						 	g=nfo1.get(i);
+						 	bw.write(g);
+				        }
+					pw.flush();
+					bw.flush();
+					pw.close();
+					bw.close();
+					csvW.close();					
+					JOptionPane.showMessageDialog(null, "Success");
 				}catch(Exception e2) {
-					
+					JOptionPane.showMessageDialog(null, "Oops something went wrong");
 				}
 			}
 		});
