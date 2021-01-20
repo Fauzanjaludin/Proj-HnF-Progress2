@@ -1,0 +1,11 @@
+-------------------------------------------CONFIRMATION RECEIPT---------------------------------------------------------------------------
+First Name: sds
+Last Name: aa
+Membership Number: ss
+Email ID: dd
+Contact Number: ss
+Attend days selection: Sat&Sun
+Wants to Join in Stress Relief Wants to be a Insomnia 
+ Had chosen: Stress Relief(Yes, Moderate, Severe)
+  Had chosen: Attend(Yes, Depends, Attend)
+                    Total amount to be paid is RM 399  
